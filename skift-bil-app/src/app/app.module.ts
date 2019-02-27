@@ -44,13 +44,15 @@ import {
   MatTooltipModule,
   MatTreeModule,
 } from '@angular/material';
+import { ButtonComponent } from './inputs/button/button.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     RegisterComponent,
     TextInputComponent,
-    SendInfoComponent
+    SendInfoComponent,
+    ButtonComponent
   ],
   imports: [
     BrowserModule,
