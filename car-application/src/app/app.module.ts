@@ -2,9 +2,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
-import { RegisterComponent } from './components/register/register.component';
-import { TextInputComponent } from './inputs/text-input/text-input.component';
-import { SendInfoComponent } from './components/send-info/send-info.component';
 
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {
@@ -44,15 +41,20 @@ import {
   MatTooltipModule,
   MatTreeModule,
 } from '@angular/material';
-import { ButtonComponent } from './inputs/button/button.component';
+import { RegisterComponent } from './views/register/register.component';
+import { HomeComponent } from './views/home/home.component';
+import { SendInfoComponent } from './views/send-info/send-info.component';
+import { CarInfoDisplayComponent } from './views/car-info-display/car-info-display.component';
+import { CarInfoOptionsComponent } from './views/car-info-options/car-info-options.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     RegisterComponent,
-    TextInputComponent,
+    HomeComponent,
     SendInfoComponent,
-    ButtonComponent
+    CarInfoDisplayComponent,
+    CarInfoOptionsComponent
   ],
   imports: [
     BrowserModule,
