@@ -44,8 +44,15 @@ import {
 import { RegisterComponent } from './views/register/register.component';
 import { HomeComponent } from './views/home/home.component';
 import { SendInfoComponent } from './views/send-info/send-info.component';
-import { CarInfoDisplayComponent } from './views/car-info-display/car-info-display.component';
 import { CarInfoOptionsComponent } from './views/car-info-options/car-info-options.component';
+import { CarRegistrationInputComponent } from './views/car-registration-input/car-registration-input.component';
+import { AppRoutingModule } from './app-routing.module';
+import { CarInfoComponent } from './views/car-info/car-info.component';
+import { CarPriceInputComponent } from './views/car-price-input/car-price-input.component';
+import { FinancingOptionComponent } from './views/financing-option/financing-option.component';
+import { FinancingDisplayComponent } from './views/financing-display/financing-display.component';
+import { ReminderComponent } from './views/reminder/reminder.component';
+
 
 @NgModule({
   declarations: [
@@ -53,8 +60,13 @@ import { CarInfoOptionsComponent } from './views/car-info-options/car-info-optio
     RegisterComponent,
     HomeComponent,
     SendInfoComponent,
-    CarInfoDisplayComponent,
-    CarInfoOptionsComponent
+    CarInfoOptionsComponent,
+    CarRegistrationInputComponent,
+    CarInfoComponent,
+    CarPriceInputComponent,
+    FinancingOptionComponent,
+    FinancingDisplayComponent,
+    ReminderComponent
   ],
   imports: [
     BrowserModule,
@@ -94,6 +106,7 @@ import { CarInfoOptionsComponent } from './views/car-info-options/car-info-optio
     MatToolbarModule,
     MatTooltipModule,
     MatTreeModule,
+    AppRoutingModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
