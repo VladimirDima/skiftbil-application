@@ -43,7 +43,6 @@ import {
 } from '@angular/material';
 import { RegisterComponent } from './views/register/register.component';
 import { HomeComponent } from './views/home/home.component';
-import { SendInfoComponent } from './views/send-info/send-info.component';
 import { CarInfoOptionsComponent } from './views/car-info-options/car-info-options.component';
 import { CarRegistrationInputComponent } from './views/car-registration-input/car-registration-input.component';
 import { AppRoutingModule } from './app-routing.module';
@@ -52,6 +51,8 @@ import { CarPriceInputComponent } from './views/car-price-input/car-price-input.
 import { FinancingOptionComponent } from './views/financing-option/financing-option.component';
 import { FinancingDisplayComponent } from './views/financing-display/financing-display.component';
 import { ReminderComponent } from './views/reminder/reminder.component';
+import { ContactSellerComponent } from './views/contact-seller/contact-seller.component';
+import { ContactBuyerComponent } from './views/contact-buyer/contact-buyer.component';
 
 
 @NgModule({
@@ -59,14 +60,15 @@ import { ReminderComponent } from './views/reminder/reminder.component';
     AppComponent,
     RegisterComponent,
     HomeComponent,
-    SendInfoComponent,
     CarInfoOptionsComponent,
     CarRegistrationInputComponent,
     CarInfoComponent,
     CarPriceInputComponent,
     FinancingOptionComponent,
     FinancingDisplayComponent,
-    ReminderComponent
+    ReminderComponent,
+    ContactSellerComponent,
+    ContactBuyerComponent
   ],
   imports: [
     BrowserModule,

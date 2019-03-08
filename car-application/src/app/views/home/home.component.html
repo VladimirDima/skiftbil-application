@@ -10,12 +10,12 @@
       <div class="col-lg-8 col-sm-12">
         <div class="row justify-content-evenly">
           <div class="col-sm-4">
-            <a routerLink="/car-options">
+            <a routerLink="/car-options" (click)="isBuyer()">
               <button mat-raised-button class="mb-3">I am a buyer</button>
             </a>
           </div>
           <div class="col-sm-4">
-            <a routerLink="/car-reg-input">
+            <a routerLink="/car-reg-input" (click)="isSeller()">
               <button mat-raised-button class="mb-3">I am a seller</button>
             </a>
           </div>

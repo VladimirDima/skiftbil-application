@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { SendInfoComponent } from './send-info.component';
+import { ContactSellerComponent } from './contact-seller.component';
 
-describe('SendInfoComponent', () => {
-  let component: SendInfoComponent;
-  let fixture: ComponentFixture<SendInfoComponent>;
+describe('ContactSellerComponent', () => {
+  let component: ContactSellerComponent;
+  let fixture: ComponentFixture<ContactSellerComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ SendInfoComponent ]
+      declarations: [ ContactSellerComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(SendInfoComponent);
+    fixture = TestBed.createComponent(ContactSellerComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
