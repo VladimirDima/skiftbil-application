@@ -12,6 +12,8 @@ import { CarPriceInputComponent }     from './views/car-price-input/car-price-in
 import { FinancingOptionComponent }     from './views/financing-option/financing-option.component';
 import { FinancingDisplayComponent }     from './views/financing-display/financing-display.component';
 import { ReminderComponent }     from './views/reminder/reminder.component';
+import { LoanFlowComponent }     from './views/loan-flow/loan-flow.component';
+import { DashboardComponent }     from './views/dashboard/dashboard.component';
  
 export const appRoutes: Routes = [
     { path: 'register',  component: RegisterComponent },
@@ -24,7 +26,10 @@ export const appRoutes: Routes = [
     { path: 'car-price',  component: CarPriceInputComponent },
     { path: 'financing-option',  component: FinancingOptionComponent },
     { path: 'financing',  component: FinancingDisplayComponent },
-    { path: 'reminder',  component: ReminderComponent },	
+    { path: 'reminder',  component: ReminderComponent },
+    { path: 'loan-flow',  component: LoanFlowComponent },
+    { path: 'dashboard',  component: DashboardComponent },
+
     // { path: 'result',  component: ResultComponent },
     { path: '',   redirectTo: '/home', pathMatch: 'full' },
     { path: '**', component: HomeComponent }

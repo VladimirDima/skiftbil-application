@@ -1,3 +1,28 @@
-<p>
-  contact-buyer works!
-</p>
+<div class="front-page">
+  <div class="container vh-100 d-flex ">
+    <div class="row justify-content-center align-self-center">
+      <mat-card>
+        <div>
+          <mat-form-field class="reg-input">
+          	<mat-label>I know the buyer's phone number</mat-label>
+            <input matInput placeholder="Input">
+          </mat-form-field>
+          <a routerLink="/financing-option">
+            <button mat-raised-button class="mb-3">Send and continue</button>
+          </a>
+          <mat-form-field class="reg-input">
+          	<mat-label>I know the buyer's email</mat-label>
+            <input matInput placeholder="Input">
+          </mat-form-field>
+          <a routerLink="/financing-option">
+            <button mat-raised-button class="mb-3">Send and continue</button>
+          </a>
+          <a routerLink="/reminder">
+            <button mat-raised-button class="mb-3">I don't know any of them</button>
+          </a>
+          <back-button color="primary"></back-button>
+        </div>
+      </mat-card>
+    </div>
+  </div>
+</div>

@@ -1,3 +1,31 @@
-<p>
-  financing-display works!
-</p>
+<div class="front-page">
+  <div class="container vh-100 d-flex ">
+    <div class="row justify-content-center align-self-center">
+      <mat-card>
+        <div class="col-lg-8 col-sm-12">
+          <p class="front-text mb-3">Do you want to apply for a loan?</p>
+        </div>
+        <div class="col-lg-8 col-sm-12">
+          <div class="row justify-content-evenly">
+            <div class="col-sm-4">
+              <a routerLink="/loan-flow">
+                <button mat-raised-button>Yes</button>
+              </a>
+            </div>
+            <div class="col-sm-4">
+              <a routerLink="/dashboard">
+                <button mat-raised-button>No</button>
+              </a>
+            </div>
+          </div>
+        </div>
+      </mat-card>
+      <mat-card>
+        <div class="col-lg-8 col-sm-12">
+          <p class="front-text mb-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        </div>
+      </mat-card>
+      <back-button color="primary"></back-button>
+    </div>
+  </div>
+</div>

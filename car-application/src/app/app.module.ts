@@ -53,6 +53,9 @@ import { FinancingDisplayComponent } from './views/financing-display/financing-d
 import { ReminderComponent } from './views/reminder/reminder.component';
 import { ContactSellerComponent } from './views/contact-seller/contact-seller.component';
 import { ContactBuyerComponent } from './views/contact-buyer/contact-buyer.component';
+import { BackComponent } from './bits/back/back.component';
+import { LoanFlowComponent } from './views/loan-flow/loan-flow.component';
+import { DashboardComponent } from './views/dashboard/dashboard.component';
 
 
 @NgModule({
@@ -68,7 +71,10 @@ import { ContactBuyerComponent } from './views/contact-buyer/contact-buyer.compo
     FinancingDisplayComponent,
     ReminderComponent,
     ContactSellerComponent,
-    ContactBuyerComponent
+    ContactBuyerComponent,
+    BackComponent,
+    LoanFlowComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,

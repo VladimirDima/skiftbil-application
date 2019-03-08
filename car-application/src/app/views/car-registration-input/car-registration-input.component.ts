@@ -11,5 +11,4 @@ export class CarRegistrationInputComponent implements OnInit {
 
   ngOnInit() {
   }
-
 }

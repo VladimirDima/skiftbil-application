@@ -7,7 +7,6 @@ export class GlobalService {
     isBuyer: boolean = false;
     isSeller: boolean = false;
 
-    constructor() {
-        
-    }
+    constructor() 
+    {}
 }
