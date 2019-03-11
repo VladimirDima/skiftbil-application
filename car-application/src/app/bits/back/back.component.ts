@@ -3,7 +3,7 @@ import { Component, Input } from '@angular/core';
 
 @Component({
     selector: 'back-button',
-    template: `<button mat-raised-button (click)="goBack()" [color]="color" type="button">Back</button>`,
+    template: `<button mat-raised-button (click)="goBack()" [color]="color" type="button" class="button-full-width">Back</button>`,
 })
 export class BackComponent {
     @Input()color: string;

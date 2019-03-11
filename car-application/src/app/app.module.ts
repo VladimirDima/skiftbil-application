@@ -1,7 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {
@@ -56,6 +57,7 @@ import { ContactBuyerComponent } from './views/contact-buyer/contact-buyer.compo
 import { BackComponent } from './bits/back/back.component';
 import { LoanFlowComponent } from './views/loan-flow/loan-flow.component';
 import { DashboardComponent } from './views/dashboard/dashboard.component';
+import { ContactInfoOptionsComponent } from './views/contact-info-options/contact-info-options.component';
 
 
 @NgModule({
@@ -74,7 +76,8 @@ import { DashboardComponent } from './views/dashboard/dashboard.component';
     ContactBuyerComponent,
     BackComponent,
     LoanFlowComponent,
-    DashboardComponent
+    DashboardComponent,
+    ContactInfoOptionsComponent,
   ],
   imports: [
     BrowserModule,
@@ -115,6 +118,9 @@ import { DashboardComponent } from './views/dashboard/dashboard.component';
     MatTooltipModule,
     MatTreeModule,
     AppRoutingModule,
+    HttpModule,
+    FormsModule,
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

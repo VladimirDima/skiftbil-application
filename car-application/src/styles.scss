@@ -13,8 +13,27 @@
 @import "reset";
 
 .centered {
-	margin: 0 auto;
+  margin: 0 auto;
 }
+
 .button-full-width {
-	width: 100%;
+  width: 100%;
+}
+
+.card-size-sm {
+  width: 100%;
+}
+
+.card-size-lg {
+  width: 100%;
+}
+
+@media screen and (min-width: 480px) {
+  .card-size-sm {
+    width: 400px;
+  }
+
+  .card-size-lg {
+    width: 600px;
+  }
 }

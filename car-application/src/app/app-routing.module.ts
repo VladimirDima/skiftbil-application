@@ -14,12 +14,14 @@ import { FinancingDisplayComponent }     from './views/financing-display/financi
 import { ReminderComponent }     from './views/reminder/reminder.component';
 import { LoanFlowComponent }     from './views/loan-flow/loan-flow.component';
 import { DashboardComponent }     from './views/dashboard/dashboard.component';
+import { ContactInfoOptionsComponent }     from './views/contact-info-options/contact-info-options.component';
  
 export const appRoutes: Routes = [
     { path: 'register',  component: RegisterComponent },
     { path: 'home',  component: HomeComponent },
     { path: 'contact-seller',  component: ContactSellerComponent },
     { path: 'contact-buyer',  component: ContactBuyerComponent },
+    { path: 'contact-options',  component: ContactInfoOptionsComponent },
     { path: 'car-options',  component: CarInfoOptionsComponent },
     { path: 'car-reg-input',  component: CarRegistrationInputComponent },
     { path: 'car-info',  component: CarInfoComponent },
