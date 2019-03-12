@@ -9,7 +9,7 @@ import {FormControl, Validators, FormGroup} from '@angular/forms';
   styleUrls: ['./register.component.scss']
 })
 export class RegisterComponent implements OnInit {
-  public ownerForm: FormGroup;
+  public regForm: FormGroup;
 
   constructor( 
   	private router: Router,
@@ -17,15 +17,16 @@ export class RegisterComponent implements OnInit {
   	) { }
 
   ngOnInit() {
-    this.ownerForm = new FormGroup({
+    this.regForm = new FormGroup({
       name: new FormControl('', [Validators.required, Validators.maxLength(60)]),
       email: new FormControl('', [Validators.required, Validators.email]),
       password: new FormControl('', Validators.compose([Validators.minLength(5),Validators.required,Validators.pattern('^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])[a-zA-Z0-9]+$') ])),
     });
   }
 
+
   public hasError = (controlName: string, errorName: string) =>{
-    return this.ownerForm.controls[controlName].hasError(errorName);
+    return this.regForm.controls[controlName].hasError(errorName);
   }
 
 
