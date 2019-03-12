@@ -1,19 +1,33 @@
 import { Component, OnInit } from '@angular/core';
 import {Router} from '@angular/router';
 import {GlobalService} from 'app/services/global.service';
-import {FormControl, Validators} from '@angular/forms';
+import {FormControl, Validators, FormGroup} from '@angular/forms';
 
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',
   styleUrls: ['./register.component.scss']
 })
-export class RegisterComponent {
+export class RegisterComponent implements OnInit {
+  public ownerForm: FormGroup;
 
   constructor( 
   	private router: Router,
   	private global: GlobalService 
   	) { }
+
+  ngOnInit() {
+    this.ownerForm = new FormGroup({
+      name: new FormControl('', [Validators.required, Validators.maxLength(60)]),
+      email: new FormControl('', [Validators.required, Validators.email]),
+      password: new FormControl('', Validators.compose([Validators.minLength(5),Validators.required,Validators.pattern('^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])[a-zA-Z0-9]+$') ])),
+    });
+  }
+
+  public hasError = (controlName: string, errorName: string) =>{
+    return this.ownerForm.controls[controlName].hasError(errorName);
+  }
+
 
   nextRoute () {
   	if (this.global.isBuyer === true) {
@@ -23,13 +37,6 @@ export class RegisterComponent {
   		this.router.navigate(["contact-buyer"]);
   	}
   	
-  }
-   email = new FormControl('', [Validators.required, Validators.email]);
-
-  getErrorMessage() {
-    return this.email.hasError('required') ? 'You must enter a value' :
-        this.email.hasError('email') ? 'Not a valid email' :
-            '';
   }
 
 }
