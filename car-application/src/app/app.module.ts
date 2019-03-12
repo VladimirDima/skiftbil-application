@@ -58,6 +58,7 @@ import { BackComponent } from './bits/back/back.component';
 import { LoanFlowComponent } from './views/loan-flow/loan-flow.component';
 import { DashboardComponent } from './views/dashboard/dashboard.component';
 import { ContactInfoOptionsComponent } from './views/contact-info-options/contact-info-options.component';
+import { NavbarComponent } from './bits/navbar/navbar.component';
 
 
 @NgModule({
@@ -78,6 +79,7 @@ import { ContactInfoOptionsComponent } from './views/contact-info-options/contac
     LoanFlowComponent,
     DashboardComponent,
     ContactInfoOptionsComponent,
+    NavbarComponent,
   ],
   imports: [
     BrowserModule,
