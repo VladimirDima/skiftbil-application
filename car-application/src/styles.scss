@@ -1,0 +1,39 @@
+/* You can add global styles to this file, and also import other style files */
+@import "mat-theme";
+
+// Imports functions, variables, and mixins that are needed by other Bootstrap files
+
+@import "variables";
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/mixins";
+@import "~bootstrap/scss/reboot";
+@import "~bootstrap/scss/grid";
+@import "~bootstrap/scss/utilities";
+@import "reset";
+
+.centered {
+  margin: 0 auto;
+}
+
+.button-full-width {
+  width: 100%;
+}
+
+.card-size-sm {
+  width: 100%;
+}
+
+.card-size-lg {
+  width: 100%;
+}
+
+@media screen and (min-width: 480px) {
+  .card-size-sm {
+    width: 400px;
+  }
+
+  .card-size-lg {
+    width: 600px;
+  }
+}

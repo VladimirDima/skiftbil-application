@@ -1,0 +1,11 @@
+.reg-input {
+  display: block;
+}
+
+::ng-deep .mat-checkbox-layout {
+  white-space: normal !important;
+  display: block !important;
+  .mat-checkbox-label {
+  	font-size: 12px;
+  }
+}

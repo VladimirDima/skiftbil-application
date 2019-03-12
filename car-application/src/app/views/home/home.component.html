@@ -1,0 +1,28 @@
+<div class="front-page">
+  <div class="container vh-100 d-flex ">
+    <div class="row justify-content-center align-self-center">
+      <div class="col-lg-8 col-sm-12 logo">
+      </div>
+      <div class="col-lg-8 col-sm-12">
+        <h1 class="front-text mb-3">Velkommen til SkiftBil, lorem ipsum dolor sit amet</h1>
+        <p class="front-text mb-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      </div>
+      <div class="col-lg-8 col-sm-12">
+        <div class="row justify-content-evenly">
+          <div class="col-sm-4">
+            <a routerLink="/car-options" (click)="isBuyer()">
+              <button mat-raised-button class="mb-3">I am a buyer</button>
+            </a>
+          </div>
+          <div class="col-sm-4">
+            <a routerLink="/car-reg-input" (click)="isSeller()">
+              <button mat-raised-button class="mb-3">I am a seller</button>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Example of button using a color -->
+<!-- <button mat-raised-button class="mat-large" color="primary">I am a buyer</button> -->

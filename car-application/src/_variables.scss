@@ -1,0 +1,26 @@
+// The _variables.scss Sass partial allows us to customize Bootstrap - more precisely, the parts of Bootstrap that we will be using. That's why we added it before any Bootstrap import. This makes Bootstrap use our values instead of its default values. Those defaults are defined in ~bootstrap/scss/variables . For instance, $link-color: theme-color("primary") !default;.
+
+$link-color: #3f51b5;
+$link-hover-color: currentColor;
+$link-hover-decoration: none;
+
+$grid-breakpoints: (
+  xs: 0, 
+  sm: 600px, 
+  md: 960px, 
+  lg: 1280px, 
+  xl: 1600px 
+);
+// handset portrait (small, medium, large) | handset landscape (small)
+// handset landscape (medium, large) | tablet portrait(small, large)
+//  tablet landscape (small, large)
+// laptops and desktops
+// large desktops
+
+$container-max-widths: (
+  sm: 600px,
+  md: 960px,
+  lg: 1280px,
+  xl: 1600px
+);
+
