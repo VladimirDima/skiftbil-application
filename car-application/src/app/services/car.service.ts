@@ -6,26 +6,26 @@ import { HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { catchError } from 'rxjs/operators';
 
-import { Car } from 'app/entities/car';
+import { HttpErrorHandler, HandleError } from '../http-error-handler.service';
 
-const httpOptions = {
-  headers: new HttpHeaders({
-    'Content-Type':  'application/json',
-    'Authorization': 'my-auth-token'
-  })
-};
+import { Car } from 'app/entities/car';
 
 @Injectable()
 export class CarService {
   url = 'http://localhost:3000';  // URL to web api
+  private handleError: HandleError;
 
   constructor(
-    private http: HttpClient) {
+    private http: HttpClient,
+    httpErrorHandler: HttpErrorHandler) {
+    this.handleError = httpErrorHandler.createHandleError('HeroesService');
   }
 
-  /** GET heroes from the server */
-  getCar (plateNumber : string): Observable<Car[]> {
-    return this.http.get<Car[]>(this.url + '/registered-cars/' + plateNumber)
+  getCar (plateNumber: string): Observable<any[]> {
+    return this.http.get<any[]>(this.url + '/registered-cars/' + plateNumber)
+        .pipe(
+            catchError(this.handleError('getCar', []))
+        );
   }
 
   // /* GET heroes whose name contains search term */

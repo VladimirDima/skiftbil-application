@@ -62,6 +62,8 @@ import { ContactInfoOptionsComponent } from './views/contact-info-options/contac
 import { NavbarComponent } from './bits/navbar/navbar.component';
 import { userService } from './services/user.service';
 
+import { HttpErrorHandler }     from './http-error-handler.service';
+import { MessageService }       from './message.service';
 
 @NgModule({
   declarations: [
@@ -127,7 +129,11 @@ import { userService } from './services/user.service';
     FormsModule,
     ReactiveFormsModule,
   ],
-  providers: [userService],
+  providers: [
+    HttpErrorHandler,
+    MessageService,
+    userService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -3,7 +3,6 @@ import {Router} from '@angular/router';
 import {GlobalService} from 'app/services/global.service';
 import {FormControl, Validators, FormGroup} from '@angular/forms';
 import {userService} from 'app/services/user.service';
-import {User} from 'app/entities/user'
 
 @Component({
   selector: 'app-register',

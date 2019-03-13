@@ -5,31 +5,28 @@ import { CarService } from '../../services/car.service';
 @Component({
   selector: 'app-car-registration-input',
   templateUrl: './car-registration-input.component.html',
-  styleUrls: ['./car-registration-input.component.scss']
+  styleUrls: ['./car-registration-input.component.scss'],
+  providers: [CarService]
 })
 export class CarRegistrationInputComponent implements OnInit {
   public regNumForm: FormGroup;
  
-  constructor( private CarService: CarService) { }
+  constructor(private carService: CarService) { }
 
   ngOnInit() {
-    this.getCar();
-
     this.regNumForm = new FormGroup({
       regNum: new FormControl('',  Validators.required),
     });
-
   }
-   
 
   getCar(): void {
     let regNum = this.regNumForm.get('regNum').value;
 
-    this.CarService.getCar(regNum)
+    this.carService.getCar(regNum)
       .subscribe(car => console.log(car));
   }
 
-   public hasError = (controlName: string, errorName: string) =>{
+  public hasError = (controlName: string, errorName: string) =>{
     return this.regNumForm.controls[controlName].hasError(errorName);
   }
 }
