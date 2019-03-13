@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpModule } from '@angular/http';
+import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 
@@ -59,6 +60,7 @@ import { LoanFlowComponent } from './views/loan-flow/loan-flow.component';
 import { DashboardComponent } from './views/dashboard/dashboard.component';
 import { ContactInfoOptionsComponent } from './views/contact-info-options/contact-info-options.component';
 import { NavbarComponent } from './bits/navbar/navbar.component';
+import { userService } from './services/user.service';
 
 
 @NgModule({
@@ -121,10 +123,11 @@ import { NavbarComponent } from './bits/navbar/navbar.component';
     MatTreeModule,
     AppRoutingModule,
     HttpModule,
+    HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
   ],
-  providers: [],
+  providers: [userService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

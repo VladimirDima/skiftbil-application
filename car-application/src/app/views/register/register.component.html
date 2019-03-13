@@ -30,7 +30,7 @@
             
             <mat-card-actions align="center">
               <div class="col-10 centered">
-                <button mat-raised-button class="mb-3 button-full-width" (click)="createUser()" [disabled]="!regForm.valid">Register and continue</button>
+                <button mat-raised-button class="mb-3 button-full-width" (click)="addUser(username.value, email.value, password.value)" [disabled]="!regForm.valid">Register and continue</button>
               </div>
               <div class="col-6 centered">
                 <back-button color="warn"></back-button>
