@@ -1,30 +1,24 @@
 import { Component, OnInit } from '@angular/core';
-import { Http, Response, RequestMethod, RequestOptions, Headers } from '@angular/http';
+import { FormControl, Validators, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-car-registration-input',
   templateUrl: './car-registration-input.component.html',
   styleUrls: ['./car-registration-input.component.scss']
 })
-export class CarRegistrationInputComponent {
+export class CarRegistrationInputComponent implements OnInit {
+  public regNumForm: FormGroup;
+ 
+  constructor() { }
 
-  result;
-  errorFromSubscribe;
-  errorFromCatch;
-  displayItems;
-  constructor(private http: Http) { }
-
-  onClick() {
-
-    this.http.get('http://api.nrpla.de')
-      .subscribe((res: Response) => {
-        this.result = res.json();
-        console.log(this.result);
-      }, error => {
-        console.log(error);
-        this.errorFromSubscribe = error;
-      });
-
+  ngOnInit() {
+    this.regNumForm = new FormGroup({
+      regNum: new FormControl('',  Validators.required),
+    });
   }
+   public hasError = (controlName: string, errorName: string) =>{
+    return this.regNumForm.controls[controlName].hasError(errorName);
+  }
+  
 
 }

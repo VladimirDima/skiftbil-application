@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
+
 @Component({
   selector: 'app-car-price-input',
   templateUrl: './car-price-input.component.html',
@@ -10,6 +11,6 @@ export class CarPriceInputComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-  }
 
+  }
 }
