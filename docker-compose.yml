@@ -1,0 +1,23 @@
+version: '3.1'
+services:
+  api:
+    build:
+      context: api
+    ports:
+      - 3000:3000
+    volumes:
+      - /usr/src/app/node_modules
+      - ./api/:/usr/src/app
+
+  angular:
+    build:
+      context: car-application
+    command: npm run start
+    ports:
+      - 4200:4200
+    volumes:
+      - /usr/src/app/node_modules
+      - ./car-application:/usr/src/app
+
+  mongodb:
+    image: mongo
