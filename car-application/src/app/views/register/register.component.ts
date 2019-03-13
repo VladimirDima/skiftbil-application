@@ -40,4 +40,8 @@ export class RegisterComponent implements OnInit {
   	
   }
 
+  createUser () {
+    this.nextRoute();
+  }
+
 }
