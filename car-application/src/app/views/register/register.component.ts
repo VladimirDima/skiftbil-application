@@ -3,6 +3,7 @@ import {Router} from '@angular/router';
 import {GlobalService} from 'app/services/global.service';
 import {FormControl, Validators, FormGroup} from '@angular/forms';
 import {userService} from 'app/services/user.service';
+import {User} from 'app/entities/user'
 
 @Component({
   selector: 'app-register',
@@ -40,14 +41,14 @@ export class RegisterComponent implements OnInit {
   	
   }
 
-  addUser (username, email, password) {
-    this.user.addUser(username, email, password);
+  // addUser (username, email, password) {
+  //   this.user.addUser(username, email, password);
 
-     if (this.regForm.invalid) {
-            return;
-        }
+  //    if (this.regForm.invalid) {
+  //           return;
+  //       }
 
-    this.nextRoute();
-  }
+  //   this.nextRoute();
+  // }
 
 }

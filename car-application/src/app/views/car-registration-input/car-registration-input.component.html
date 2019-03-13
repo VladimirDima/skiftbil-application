@@ -18,7 +18,7 @@
                 </div>
                 <div class="col-8 centered">
                   <a routerLink="/car-info">
-                    <button mat-raised-button class="button-full-width mb-3" [disabled]="!regNumForm.valid">Next</button>
+                    <button mat-raised-button class="button-full-width mb-3" [disabled]="!regNumForm.valid" (click)="getCar()">Next</button>
                   </a>
                 </div>
                 <div class="col-sm-12">
