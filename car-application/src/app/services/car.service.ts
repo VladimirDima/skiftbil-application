@@ -18,7 +18,7 @@ export class CarService {
   constructor(
     private http: HttpClient,
     httpErrorHandler: HttpErrorHandler) {
-    this.handleError = httpErrorHandler.createHandleError('HeroesService');
+    this.handleError = httpErrorHandler.createHandleError('CarService');
   }
 
   getCar (plateNumber: string): Observable<any[]> {

@@ -23,7 +23,7 @@ export class CarRegistrationInputComponent implements OnInit {
     let regNum = this.regNumForm.get('regNum').value;
 
     this.carService.getCar(regNum)
-      .subscribe(car => console.log(car));
+    .subscribe(car => console.log(car));
   }
 
   public hasError = (controlName: string, errorName: string) =>{

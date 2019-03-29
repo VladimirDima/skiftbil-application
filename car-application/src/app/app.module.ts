@@ -64,6 +64,7 @@ import { userService } from './services/user.service';
 
 import { HttpErrorHandler }     from './http-error-handler.service';
 import { MessageService }       from './message.service';
+import { FooterComponent } from './bits/footer/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -84,6 +85,7 @@ import { MessageService }       from './message.service';
     DashboardComponent,
     ContactInfoOptionsComponent,
     NavbarComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,
